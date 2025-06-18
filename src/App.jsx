@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css"; // Tailwind 스타일
 import Todo from "./Todo";
 import React, { useState, useEffect } from "react";
 import {
@@ -92,7 +93,11 @@ function App() {
     content = todoListPage;
   }
 
-  return <div className="App">{content}</div>;
+   return (
+     <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+  );
 }
 
 export default App;
